@@ -1,12 +1,12 @@
 public class Partie1 {
 
     public enum Race {
-        Humain(18),
-        Split(3),
-        Klackons(6),
-        Klingon(12),
-        Psilon(24),
-        Boron(48);
+        HUMAIN(18),
+        SPLIT(3),
+        KLACKONS(6),
+        KLINGON(12),
+        PSILON(24),
+        BORON(48);
 
         final int ageAdulte;
 
@@ -26,7 +26,7 @@ public class Partie1 {
 
         public Creature() {
             this.nom = "PEAU";
-            this.race = Race.Humain;
+            this.race = Race.HUMAIN;
             this.age = 24;
         }
 

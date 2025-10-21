@@ -22,7 +22,7 @@ public class Partie2 {
         private int nbMaximumPassager;
 
         public Vaisseau() {
-            this.capitaine = new Capitaine("Matt PEAU", Partie1.Race.Humain, 42, 0);
+            this.capitaine = new Capitaine("Matt PEAU", Partie1.Race.HUMAIN, 42, 0);
             this.passagers = new ArrayList<>();
             this.nbMaximumPassager = 10;
         }
@@ -77,15 +77,15 @@ public class Partie2 {
 
             for (Partie1.Creature passager : vaisseau.passagers) {
 
-                if (passager.race == Partie1.Race.Klingon) {
+                if (passager.race == Partie1.Race.KLINGON) {
                     nbKlingons++;
-                    if (this.race != Partie1.Race.Klingon) {
+                    if (this.race != Partie1.Race.KLINGON) {
                         System.out.println("Un Klingon détecté et le contrôleur n'est pas Klingon!");
                         return false;
                     }
                 }
 
-                if (passager.race == Partie1.Race.Klackons) {
+                if (passager.race == Partie1.Race.KLACKONS) {
                     nbKlackons++;
                     if (nbKlackons > 1) {
                         System.out.println("Il y a plus d'un Klackons!");
@@ -93,11 +93,11 @@ public class Partie2 {
                     }
                 }
 
-                if (passager.race == Partie1.Race.Humain) {
+                if (passager.race == Partie1.Race.HUMAIN) {
                     nbHumains++;
                 }
 
-                if ((passager.nom == "PEAU") && passager.race != Partie1.Race.Humain)  {
+                if ((passager.nom == "PEAU") && passager.race != Partie1.Race.HUMAIN)  {
                     System.out.println("Une créature non-humaine porte mon nom!");
                     return false;
                 }
